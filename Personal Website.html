@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Personal Website</title>
+<style>
+p.self{
+    font-size:20px;
+}
+a{
+  color:darkblue;
+}
+#header{
+    color: blue;
+    font-style: normal;
+    font-size:35px;
+    padding-left:30px;
+    width:43%
+}
+body{
+    background-image: url("IU.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+  }
+#self{
+    width:31%;
+    text-align:left;
+    color:cyan;
+    font-size: large;
+    font-family:initial;
+    padding-left:40px;
+}
+#photo{
+    width:15%;
+    text-align:center;
+    font-size:x-large;
+    color:darkorchid;
+    padding-left:30px;
+}
+#table{
+    position:absolute;
+    right:50px;
+    top:35px;
+    width:28%;
+    color:deeppink;
+    font-size:25px;
+}
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 5px solid deeppink;
+  text-align: center;
+}
+td.con{
+  width:260px;
+}
+th.con{
+  width:360px;
+}
+#ido{
+  position:absolute;
+  right:0%;
+  top:130%;
+  color:crimson;
+  font-size:25px;
+  width:100%
+}
+​ul.idol {
+  list-style-type: circle;
+  padding:20px;
+}
+#myImage{
+  position: absolute;
+  right:15%;
+  top:15%;
+}
+</style>
+
+</head>
+
+<body>
+<div id="header">
+    <h1>Personal Webpage</h1>
+</div>
+
+<div id="self">
+    <h2 style="text-align: center;color:darkorchid;font-size: 30px;" >Self-Introduction</h2>
+    <p class="self"> I am <strong style="color:gold">Wu Shenguang</strong>.I come from PR of China. I am studying Electronic information Engineering
+        in Hong Kong polyu.</p>
+    <p class="self">I prefer basketball and e-sports to be my hobbies and I am very optimistic and out-going.
+        The trouble ahead never stops me to make progress. And I hope I can improve
+        myself during the time I study in Hong Kong Polyu. I expect to have a good semester. </p>    
+</div>
+
+<div id="photo">
+<h3>My Photo</h3>
+<img src="wsg.jpg" width=180px height=310px>
+</div>
+
+<div id="table">
+  <h4 style="text-align: center; color:darkorchid;font-size:30px">My Education Background</h4>
+    <table style="width: 100%;">
+        <tr>
+          <th>Time</th>
+          <th class="con">School  (Links to websites)</th> 
+        </tr>
+        <tr>
+          <td>2012-2015</td>
+          <td class="con"><a href="http://www.hzhs.net/">HuZhou HighSchool</a></td>
+        </tr>
+        <tr>
+          <td>2015-2019</td>
+          <td classs="con"><a href="https://www.tku.edu.tw/">TamKang University</a></td>
+        </tr>
+        <tr>
+          <td>2019-2020</td>
+          <td class="con"><a href="https://www.polyu.edu.hk/">HongKong Polytechnic University</a></td>
+        </tr>
+      </table>
+<div id="ido">
+ <h5 style="padding-left: 5%; color:darkorchid;font-size:30px;">My Idols</h5>
+ <ul class="idol">
+  <li onclick="idols(1)">TheShy</li><br>
+  <li onclick="idols(0)">Estelle Chen</li><br>
+  <li onclick="idols(2)">Kevin Durant</li><br>
+</ul>
+<script>
+function idols(ido) {
+  var pic;
+  if (ido == 0) {
+    pic = "Estelle.jpg"
+  } else if(ido == 1) {
+    pic = "TheShy.jpg"
+  }
+  else{
+    pic="Durant.jpg"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="unknown.jfif" width="200" height="250">
+<p style="color:gold">Hint: Click the name to view their photos</p>
+</div>
+
+
+</body>
+</html>
